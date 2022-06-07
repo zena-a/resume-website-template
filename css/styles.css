@@ -1,0 +1,204 @@
+/*CSS Variables*/
+:root {
+  /*Colors*/
+  --bg-color: #fff;
+  --side-bg-color: #053B4D;
+  --bar-bg-color: #fff;
+  --bar-progress-color: #62C4E3;
+  --text-color-header: #62C4E3;
+  --text-color-side: #fff;
+  --text-color-body: #090909;
+  --link-hover-color: #62C4E3; 
+  --button-color: #053B4D;
+  --button-text-color: #fff;
+  
+  /*Fonts*/
+  --body-font: 'Open Sans', sans-serif;
+  --header-font: 'Varela', sans-serif;
+  --title-font-size: 4rem;
+  --normal-font-size: 1.25rem;
+  --heading-font-size: 2rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff url('https://res.cloudinary.com/zenascloudplayground/image/upload/v1654457583/waterfall-eric-muhr-IIN4LZiuO_w-unsplash_asv7cg.jpg') no-repeat fixed center;
+  background-size: cover;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--text-color-body);
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: var(--header-font);
+  font-size: var(--title-font-size);
+}
+
+h2 {
+  font-family: var(--header-font);
+  font-size: var(--heading-font-size);
+  font-weight: 400;
+  margin: 1rem 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #fff;
+  margin: 1rem 0;
+}
+
+ul {
+  margin-left: 10px;
+}
+
+.resume-container {
+  display: grid;
+  grid-template-areas:
+    "resume-side"
+    "resume-main";
+  grid-template-columns: 1fr 2fr;
+  max-width: 1217px;
+  margin: auto;
+}
+
+/*RESPONSIVE: Small Size Screens and Below*/
+@media screen and (max-width: 690px){
+  .resume-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+.resume-side {
+  padding: 0 2rem 0;
+  background-color: var(--side-bg-color);
+  color: var(--text-color-side);
+}
+
+/*Resume Side Bar*/
+/*--Profile Section--*/
+.profile {
+  text-align: center;
+}
+
+.profile-img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  margin-top: 16px;
+}
+
+.job-title {
+  display: block;
+  font-size: var(--heading-font-size);
+  font-weight: 300;
+  padding-bottom: 1rem;
+}
+
+.social-icons {
+  padding-top: 2rem;
+  margin-right: 1rem;
+}
+
+/*--Skills Section--*/
+.skill-list {
+  list-style: none;
+}
+
+.skill-name {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 24px;
+  border-radius: 15px;
+  background-color: var(--bar-bg-color);
+  margin-bottom: 1rem;
+}
+
+.level {
+  background-color: var(--bar-progress-color);
+  height: 24px;
+  border-radius: 15px;
+}
+
+.html {width:90%;}
+.css {width:70%;}
+.javascript {width:80%;}
+.tailwind {width:60%;}
+.angular {width:45%;}
+.mongodb {width:80%;}
+.nodejs {width:50%;}
+.aws {width:30%;}
+
+/*Resume Main*/
+.resume-main {
+  background-color: var(--bg-color);
+  padding: 0 2rem 0; 
+}
+
+.grid {
+  display: grid;
+  grid-template-areas:
+    "company1 job-description1"
+    "company2 job-description2"
+    "project1 project-description1"
+    "project2 project-description2";
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+/*RESPONSIVE: Medium Sized Screens and Below*/
+@media screen and (max-width: 950px){
+  .grid {
+    display: grid;
+    grid-template-areas:
+      "company1"
+      "job-description1"
+      "company2"
+      "job-description2"
+      "project1"
+      "project-description1"
+      "project2"
+      "project-description2";
+    grid-template-columns: 1fr;
+  }
+}
+
+/*Projects Section*/
+.project-demo {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+}
+
+/*Back to Top Button*/
+.btn-top {
+  grid-column: 2 / 2;
+  grid-row: 2;
+  width: 150px;
+  padding: 1rem;
+  background-color: var(--button-color);
+  color: var(--button-text-color);
+  border-radius: 50px;
+  place-self: end;
+  margin-bottom: 20px;
+}
