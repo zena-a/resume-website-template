@@ -8,5 +8,6 @@ This is built with HTML and vanilla CSS (including custom properties aka CSS var
 
 ## Project Demo
 
+![resume-demo](./resume-wesbite-template.gif)
 
 If you like this design and wish to use it for your own resume, feel free to do so! Leave a star or feel free to contact me hello@zenaanthony.me.
